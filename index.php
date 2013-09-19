@@ -7,7 +7,7 @@
 <h1>Herzlich Willkommen</h1>
 ... beim Toffifee-Skript!!
 <br>
-<form action="toffifee.php" method="get">
+<form action="toffifee.php" method="post">
   <font color="#FF0000">Bitte Wort oder Satz eingeben:</font><br>
   <input style="background-color:#DEDFDE; font-size:12px; font-family:Verdana; color:#FF0000" name="wort" type="text" size="25">
   <input type="submit" value="Los!">

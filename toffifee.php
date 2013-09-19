@@ -1,5 +1,5 @@
 <?php
-if ($_SERVER['REQUEST_METHOD'] == 'GET')
+if ($_SERVER['REQUEST_METHOD'] == 'POST')
 {
    $wort=$_REQUEST[wort];
    $laenge = strlen($wort);
