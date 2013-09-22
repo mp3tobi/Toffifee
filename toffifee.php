@@ -1,5 +1,5 @@
 <?php
-if ($_SERVER['REQUEST_METHOD'] == 'POST')
+if ($_SERVER['REQUEST_METHOD'] == 'GET')
 {
    $wort=$_REQUEST[wort];
    $laenge = strlen($wort);
@@ -148,10 +148,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
       fclose( $fd );
 
       //Festlegung, welche Sachen in die Datei geschrieben werden sollen;
- //   $urlvar = urlencode($wort);
+      $urlvar = urlencode($wort);
       $fileMessage = "<b>Datum:</b>  ";
       $fileMessage .=(date("l d-m-Y H:i:s"));
-      $fileMessage .= " <form action='.toffifee.php' method=post><input type=hidden name=wort value=$wort ><input type=submit value=$wort></form>";
+   // $fileMessage .= " <form action='toffifee.php' method=post><input type=hidden name=wort value=$wort ><input type=submit value=$wort></form>";
+      $fileMessage .= " <a href=\"./toffifee.php?wort=$urlvar\">$wort</a>";
       $fileMessage .= " <font color=\"#00FD00\"><b>IP-Adresse</b> $ipadresse</font><br>\n";
       $fileMessage .= "$current";
 
